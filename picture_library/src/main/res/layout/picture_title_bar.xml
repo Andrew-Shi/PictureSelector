@@ -47,10 +47,5 @@
             android:textColor="?picture.right.textColor"
             android:textSize="14sp" />
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/line_color" />
 </LinearLayout>
 
