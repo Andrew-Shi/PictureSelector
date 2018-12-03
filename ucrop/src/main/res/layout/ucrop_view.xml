@@ -17,4 +17,10 @@
         android:layout_height="match_parent"
         android:padding="@dimen/ucrop_padding_crop_frame"/>
 
+    <ImageView
+        android:id="@+id/iv_cover_location_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cover_crop_view"
+        android:scaleType="center"/>
 </merge>
