@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
@@ -176,6 +177,9 @@ public final class PictureSelector {
      * @param path
      */
     public void externalPictureVideo(String path) {
+        if (TextUtils.isEmpty(path)){
+            return;
+        }
         if (!DoubleUtils.isFastDoubleClick()) {
             Intent intent = new Intent(getActivity(), PictureVideoPlayActivity.class);
             intent.putExtra("video_path", path);
@@ -189,6 +193,9 @@ public final class PictureSelector {
      * @param path
      */
     public void externalPictureAudio(String path) {
+        if (TextUtils.isEmpty(path)){
+            return;
+        }
         if (!DoubleUtils.isFastDoubleClick()) {
             Intent intent = new Intent(getActivity(), PicturePlayAudioActivity.class);
             intent.putExtra("audio_path", path);
